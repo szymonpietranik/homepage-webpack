@@ -1,153 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
-    <meta name="description" content="Your project description" />
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta
-      property="og:image"
-      content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png"
-    />
-
-    <!-- uncomment the line below to enable PWA  -->
-    <!-- <link rel="manifest" href="manifest.json" /> -->
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="pwa/apple-icon-180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="167x167"
-      href="pwa/apple-icon-167.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="pwa/apple-icon-152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="pwa/apple-icon-120.png"
-    />
-
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-2732.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2732-2048.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2388.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2388-1668.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2224.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2224-1668.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1536-2048.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-1536.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2688.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2688-1242.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1125-2436.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2436-1125.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-828-1792.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1792-828.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2208.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2208-1242.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-750-1334.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1334-750.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-640-1136.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1136-640.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
+    <title>Document</title>
   </head>
-  <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
-    </div>
+
+  <body class="body">
+    <header class="header">
+      <button class="hamburger hamburger--js" aria-label="Otwórz menu">
+        🍔
+      </button>
+      <nav class="navigation navigation--js">
+        <a class="navigation__link" href="index.html">Strona główna</a>
+        <a class="navigation__link" href="nauka-html.html">html</a>
+        <a class="navigation__link" href="nauka-css.html">CSS</a>
+        <a class="navigation__link" href="nauka-javascript.html">JavaScript</a>
+        <a class="navigation__link" href="nauka-grid.html">Grid</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <header id="top" class="main__header">
+        <h1 class="main__heading">Szymon Pietranik - Nauka Frontendu</h1>
+      </header>
+
+      <section class="about">
+        <h2 class="about__heading">habitant morbi tristique senectus et</h2>
+        <p class="about__paragraph">
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Nibh nisl
+          condimentum id venenatis a.
+        </p>
+      </section>
+
+      <section class="notes">
+        <h2 class="notes-heading">WTF: Co Ten Frontend? #2</h2>
+        <div class="grid">
+          <article class="week-summary">
+            <h3 class="week-summary__title">Tydzień 1</h3>
+            <p class="week-summary__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut Dignissim diam quis enim lobortis
+              scelerisque.
+            </p>
+            <p
+              class="week-summary__description week-summary__description--js"
+            ></p>
+          </article>
+
+          <article class="week-summary">
+            <h3 class="week-summary__title">Tydzień 2</h3>
+            <p class="week-summary__description">
+              Warstwy strony internetowej Warstwa 0: Treść Warstwa 1: Semantyka
+              (HTML) Warstwa 2: Prezentacja (CSS) Warstwa 3: Interakcja
+              (JavaScript) CONTENT IS THE KING
+            </p>
+          </article>
+
+          <article class="week-summary">
+            <h3 class="week-summary__title">Tydzień 3</h3>
+            <p class="week-summary__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut Dignissim diam quis enim lobortis
+              scelerisque.
+            </p>
+          </article>
+
+          <article class="week-summary">
+            <h3 class="week-summary__title">Tydzień 4</h3>
+            <p class="week-summary__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut Dignissim diam quis enim lobortis
+              scelerisque.
+            </p>
+          </article>
+
+          <article class="week-summary">
+            <h3 class="week-summary__title">Tydzień 5</h3>
+            <p class="week-summary__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut Dignissim diam quis enim lobortis
+              scelerisque.
+            </p>
+          </article>
+
+          <article class="week-summary">
+            <h3 class="week-summary__title">Tydzień 6</h3>
+            <p class="week-summary__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut Dignissim diam quis enim lobortis
+              scelerisque.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Made with 🍕 in
+        <a
+          class="footer__link"
+          href="https://www.google.com/maps/place/53%C2%B007'56.6%22N+23%C2%B009'33.0%22E/@53.1307063,23.135773,14z/data=!4m5!3m4!1s0x0:0x0!8m2!3d53.1323889!4d23.1591667"
+          target="_blank"
+          >53°07'56.6"N 23°09'33.0"E</a
+        >
+        2020
+      </p>
+      <a class="footer__top" href="#top">Wróć na górę strony</a>
+    </footer>
   </body>
 </html>
